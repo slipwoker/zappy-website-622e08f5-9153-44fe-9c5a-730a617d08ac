@@ -412,3 +412,25 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 });
+
+/* Added Component Script */
+
+document.addEventListener('DOMContentLoaded', function() {
+  const getDirectionsBtns = document.querySelectorAll('.get-directions-btn');
+  const mapOverlays = document.querySelectorAll('.map-overlay');
+  
+  getDirectionsBtns.forEach(btn => {
+    btn.addEventListener('click', function() {
+      // Replace with your actual address
+      const address = encodeURIComponent('123 Main Street, Your City, State 12345');
+      window.open('https://www.google.com/maps/dir/?api=1&destination=' + address, '_blank');
+    });
+  });
+  
+  mapOverlays.forEach(overlay => {
+    overlay.addEventListener('click', function() {
+      // Can load actual embedded map here
+      alert('Map integration can be added with Google Maps API');
+    });
+  });
+});
