@@ -390,3 +390,67 @@ window.onload = function() {
         }
     }, true);
 };
+
+/* Added Component Script */
+document.addEventListener('DOMContentLoaded', function() {
+  const carousels = document.querySelectorAll('.testimonial-carousel');
+  
+  carousels.forEach(carousel => {
+    const slides = carousel.querySelectorAll('.testimonial-slide');
+    const prevBtn = carousel.querySelector('.carousel-prev');
+    const nextBtn = carousel.querySelector('.carousel-next');
+    const dotsContainer = carousel.querySelector('.carousel-dots');
+    
+    if (!slides.length || !prevBtn || !nextBtn || !dotsContainer) return;
+    
+    let currentSlide = 0;
+    let autoRotateInterval;
+    
+    // Create dots
+    slides.forEach((_, index) => {
+      const dot = document.createElement('button');
+      dot.classList.add('carousel-dot');
+      dot.setAttribute('aria-label', `Go to testimonial ${index + 1}`);
+      if (index === 0) dot.classList.add('active');
+      dot.addEventListener('click', () => {
+        goToSlide(index);
+        resetAutoRotate();
+      });
+      dotsContainer.appendChild(dot);
+    });
+    
+    const dots = carousel.querySelectorAll('.carousel-dot');
+    
+    function goToSlide(n) {
+      slides[currentSlide].classList.remove('active');
+      dots[currentSlide].classList.remove('active');
+      
+      currentSlide = (n + slides.length) % slides.length;
+      
+      slides[currentSlide].classList.add('active');
+      dots[currentSlide].classList.add('active');
+    }
+    
+    function resetAutoRotate() {
+      clearInterval(autoRotateInterval);
+      autoRotateInterval = setInterval(() => goToSlide(currentSlide + 1), 6000);
+    }
+    
+    prevBtn.addEventListener('click', () => {
+      goToSlide(currentSlide - 1);
+      resetAutoRotate();
+    });
+    
+    nextBtn.addEventListener('click', () => {
+      goToSlide(currentSlide + 1);
+      resetAutoRotate();
+    });
+    
+    // Auto-rotate every 6 seconds
+    autoRotateInterval = setInterval(() => goToSlide(currentSlide + 1), 6000);
+    
+    // Pause on hover
+    carousel.addEventListener('mouseenter', () => clearInterval(autoRotateInterval));
+    carousel.addEventListener('mouseleave', resetAutoRotate);
+  });
+});
