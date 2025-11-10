@@ -1,0 +1,552 @@
+<!DOCTYPE html><html lang="en" dir="ltr"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Professional mold remediation specialist services for property managers. Water damage restoration, mold removal, fire damage repair, and emergency response in the Bay Area.">
+  <meta name="keywords" content="mold remediation specialist, mold remediation companies, mold remediation experts, water damage restoration, fire damage repair">
+  <title>Professional Mold Remediation Specialist Services — Swift Restoration</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="48x48" href="assets/favicon-48x48.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/favicon-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="assets/favicon-512x512.png">
+    <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<style>
+/* Zappy Attribution Header Styles */
+.zappy-header {
+  position: static;
+  width: 100%;
+  background: white;
+  box-shadow: 0px 4px 19px 0px rgba(0,0,0,0.04);
+  padding: 16px 10px;
+  text-align: center;
+  font-family: 'Nunito', sans-serif;
+  font-size: 16px;
+  color: #4a4a4a;
+  line-height: 21px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 21px;
+}
+
+    .zappy-header p {
+      margin: 0;
+      padding: 0;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 21px;
+      white-space: nowrap;
+      display: inline-block;
+      vertical-align: baseline;
+      margin-bottom: 0 !important;
+    }
+
+.zappy-header .zappy-link {
+  font-weight: 700;
+  color: #4a4a4a;
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+
+.zappy-header .zappy-link:hover {
+  opacity: 0.7;
+}</style>
+    <!-- Cookie Consent -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vanilla-cookieconsent@3/dist/cookieconsent.css" />
+    <script src="https://cdn.jsdelivr.net/npm/vanilla-cookieconsent@3/dist/cookieconsent.umd.js"></script>
+    <!-- Mickidum Accessibility Toolbar -->
+    <script src="https://cdn.jsdelivr.net/gh/mickidum/acc_toolbar/acctoolbar/acctoolbar.min.js"></script>
+<!-- Zappy Analytics -->
+<script>
+(function() {
+  'use strict';
+  
+  // Configuration
+  var config = {
+    websiteId: '622e08f5-9153-44fe-9c5a-730a617d08ac',
+    apiUrl: 'https://api.zappy5.com/api/analytics/track',
+    sessionDuration: 30 * 60 * 1000, // 30 minutes
+    visitorDuration: 30 * 24 * 60 * 60 * 1000, // 30 days
+    trackPageViews: true,
+    trackClicks: true,
+    trackFormSubmissions: true
+  };
+  
+  // Generate or retrieve persistent visitor ID (30 days)
+  function getVisitorId() {
+    var visitorKey = 'zappy_visitor_' + config.websiteId;
+    var visitor = null;
+    
+    try {
+      visitor = localStorage.getItem(visitorKey);
+      if (visitor) {
+        var visitorData = JSON.parse(visitor);
+        var now = Date.now();
+        
+        // Check if visitor ID is still valid (30 days)
+        if (now - visitorData.created < config.visitorDuration) {
+          // Update last seen timestamp
+          visitorData.lastSeen = now;
+          localStorage.setItem(visitorKey, JSON.stringify(visitorData));
+          return visitorData.id;
+        }
+      }
+    } catch (e) {
+      console.warn('Zappy Analytics: LocalStorage not available');
+    }
+    
+    // Generate new visitor ID
+    var newVisitorId = 'zv_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
+    
+    try {
+      localStorage.setItem(visitorKey, JSON.stringify({
+        id: newVisitorId,
+        created: Date.now(),
+        lastSeen: Date.now()
+      }));
+    } catch (e) {
+      // Continue without local storage
+    }
+    
+    return newVisitorId;
+  }
+  
+  // Generate or retrieve session ID (30 minutes)
+  function getSessionId() {
+    var sessionKey = 'zappy_session_' + config.websiteId;
+    var session = null;
+    
+    try {
+      session = sessionStorage.getItem(sessionKey);
+      if (session) {
+        var sessionData = JSON.parse(session);
+        var now = Date.now();
+        
+        // Check if session is still valid
+        if (now - sessionData.timestamp < config.sessionDuration) {
+          // Update timestamp
+          sessionData.timestamp = now;
+          sessionStorage.setItem(sessionKey, JSON.stringify(sessionData));
+          return sessionData.id;
+        }
+      }
+    } catch (e) {
+      console.warn('Zappy Analytics: SessionStorage not available');
+    }
+    
+    // Generate new session ID
+    var newSessionId = 'zs_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
+    
+    try {
+      sessionStorage.setItem(sessionKey, JSON.stringify({
+        id: newSessionId,
+        timestamp: Date.now()
+      }));
+    } catch (e) {
+      // Continue without session storage
+    }
+    
+    return newSessionId;
+  }
+  
+  var visitorId = getVisitorId();
+  var sessionId = getSessionId();
+  
+  // Track an event
+  function trackEvent(eventType, data) {
+    data = data || {};
+    
+    var eventData = {
+      website_id: config.websiteId,
+      event_type: eventType,
+      page_path: window.location.pathname,
+      referrer: document.referrer || 'direct',
+      visitor_id: visitorId,
+      session_id: sessionId,
+      metadata: data
+    };
+    
+    // Use sendBeacon if available (better for page unload events)
+    if (navigator.sendBeacon) {
+      var blob = new Blob([JSON.stringify(eventData)], { type: 'application/json' });
+      navigator.sendBeacon(config.apiUrl, blob);
+    } else {
+      // Fallback to fetch
+      fetch(config.apiUrl, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(eventData),
+        keepalive: true
+      }).catch(function(error) {
+        console.warn('Zappy Analytics: Failed to track event', error);
+      });
+    }
+  }
+  
+  // Track page view
+  if (config.trackPageViews) {
+    trackEvent('pageview', {
+      title: document.title,
+      url: window.location.href
+    });
+  }
+  
+  // Track clicks on important elements
+  if (config.trackClicks) {
+    document.addEventListener('click', function(e) {
+      var target = e.target;
+      
+      // Track button clicks (counted as actions)
+      if (target.tagName === 'BUTTON' || target.closest('button')) {
+        var button = target.tagName === 'BUTTON' ? target : target.closest('button');
+        trackEvent('click', {
+          element: 'button',
+          text: button.textContent.trim().substring(0, 100),
+          id: button.id || null,
+          class: button.className || null
+        });
+      }
+      
+      // Track link clicks (navigation - not counted as actions)
+      else if (target.tagName === 'A' || target.closest('a')) {
+        var link = target.tagName === 'A' ? target : target.closest('a');
+        trackEvent('navigation', {
+          element: 'link',
+          text: link.textContent.trim().substring(0, 100),
+          href: link.href,
+          external: link.hostname !== window.location.hostname
+        });
+      }
+    }, true);
+  }
+  
+  // Track form submissions
+  if (config.trackFormSubmissions) {
+    document.addEventListener('submit', function(e) {
+      var form = e.target;
+      
+      trackEvent('form_submit', {
+        form_id: form.id || null,
+        form_name: form.name || null,
+        form_action: form.action || null,
+        form_method: form.method || 'GET'
+      });
+    }, true);
+  }
+  
+  // Track time on page (send on page unload)
+  var pageLoadTime = Date.now();
+  
+  window.addEventListener('beforeunload', function() {
+    var timeOnPage = Math.floor((Date.now() - pageLoadTime) / 1000); // in seconds
+    
+    trackEvent('page_unload', {
+      time_on_page: timeOnPage,
+      page_path: window.location.pathname
+    });
+  });
+  
+  // Expose tracking function globally for custom events
+  window.zappyAnalytics = {
+    track: trackEvent,
+    getVisitorId: function() { return visitorId; },
+    getSessionId: function() { return sessionId; }
+  };
+  
+})();
+</script>
+<!-- End Zappy Analytics -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- Zappy Attribution Header -->
+<div id="zappy-attribution-header" class="zappy-header" style="display: none;">
+  <p>Happily created by&nbsp;<a href="https://zappy5.com" target="_blank" rel="noopener noreferrer" class="zappy-link">Zappy</a></p>
+</div>
+  <nav class="navbar" id="navbar">
+    <div class="container nav-container">
+      <div class="nav-brand">
+        <a href="/" class="logo-link">
+          <img src="assets/swift-restoration-restoration-and-remediation-services-logo.webp" alt="Swift Restoration" class="logo" />
+        </a>
+      </div>
+      <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu">
+        <svg class="hamburger-icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
+          <path d="M3 12h18M3 6h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+        </svg>
+        <svg class="close-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" style="display: none;">
+          <path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+        </svg>
+      </button>
+      <button class="phone-header-btn" aria-label="Call us">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+        </svg>
+      </button>
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="/services">Services</a></li>
+        <li><a href="/about">About</a></li>
+      </ul>
+      <div class="nav-cta-container">
+        <li class="nav-cta-item"><a href="/contact" class="nav-cta-btn">Contact</a></li>
+      </div>
+    </div>
+  </nav>
+
+  <section class="page-header">
+    <div class="container">
+      <h1>Comprehensive Restoration &amp; Remediation Services</h1>
+      <h3>Swift Restoration offers complete mold remediation specialist services designed specifically for property management companies in the San Francisco Bay Area</h3>
+    </div>
+  </section>
+
+  <section class="services-intro">
+    <div class="container">
+      <p>As one of the leading mold remediation companies in the Bay Area, Swift Restoration provides a full range of restoration and remediation services. Our certified mold remediation experts handle everything from emergency water extraction to complete property reconstruction, ensuring your buildings are safe, dry, and restored to their original condition.</p>
+      <p>We understand that property managers need reliable partners who can respond quickly, work efficiently, and provide thorough documentation. That's why we've built our services around your specific needs, offering 24/7 emergency response, direct insurance billing, and comprehensive reporting for every project.</p>
+    </div>
+  </section>
+
+  <section class="services-detailed">
+    <div class="container">
+      <div class="service-detail">
+        <div class="service-detail-content">
+          <h2>Water Damage Restoration</h2>
+          <p>Water damage can strike at any time, from burst pipes and flooding to roof leaks and appliance failures. Our mold remediation companies team responds within 60 minutes to begin water extraction and drying. We use industrial-grade equipment including truck-mounted extractors, commercial dehumidifiers, and air movers to remove water quickly and prevent secondary damage.</p>
+          <p>Our water damage restoration process includes moisture detection, structural drying, antimicrobial treatment, and complete documentation. We monitor moisture levels throughout the drying process to ensure your property is completely dry before we begin repairs. This thorough approach prevents mold growth and ensures lasting results.</p>
+          <ul class="service-features">
+            <li><i class="fas fa-check"></i> 24/7 Emergency Water Extraction</li>
+            <li><i class="fas fa-check"></i> Advanced Moisture Detection Technology</li>
+            <li><i class="fas fa-check"></i> Industrial Drying Equipment</li>
+            <li><i class="fas fa-check"></i> Structural Drying &amp; Dehumidification</li>
+            <li><i class="fas fa-check"></i> Complete Moisture Monitoring</li>
+          </ul>
+        </div>
+        <div class="service-detail-image">
+          <img data-placeholder="service-4" data-context="Professional water damage restoration technician operating industrial water extraction equipment in flooded apartment" src="assets/swift-restoration-restoration-and-remediation-services-service-service-4.webp" alt="Emergency water damage extraction and drying services">
+        </div>
+      </div>
+
+      <div class="service-detail reverse">
+        <div class="service-detail-content">
+          <h2>Mold Remediation &amp; Removal</h2>
+          <p>Mold growth poses serious health risks and can cause extensive property damage if not addressed properly. As certified mold remediation experts, we follow strict IICRC protocols to safely remove mold and prevent future growth. Our mold remediation specialist team begins with thorough testing to identify the type and extent of contamination.</p>
+          <p>We contain the affected area to prevent spore spread, use HEPA filtration during removal, and treat all surfaces with antimicrobial solutions. After removal, we address the underlying moisture problem to prevent recurrence. Our comprehensive approach ensures your properties are safe for tenants and meet all regulatory requirements.</p>
+          <ul class="service-features">
+            <li><i class="fas fa-check"></i> Certified Mold Inspection &amp; Testing</li>
+            <li><i class="fas fa-check"></i> Safe Containment &amp; Removal</li>
+            <li><i class="fas fa-check"></i> HEPA Air Filtration</li>
+            <li><i class="fas fa-check"></i> Antimicrobial Treatment</li>
+            <li><i class="fas fa-check"></i> Moisture Source Remediation</li>
+          </ul>
+        </div>
+        <div class="service-detail-image">
+          <img data-placeholder="service-5" data-context="Mold remediation specialist in protective equipment using HEPA vacuum to remove mold from residential property walls" src="assets/swift-restoration-restoration-and-remediation-services-service-service-5.webp" alt="Professional mold remediation and removal process">
+        </div>
+      </div>
+
+      <div class="service-detail">
+        <div class="service-detail-content">
+          <h2>Fire &amp; Smoke Damage Restoration</h2>
+          <p>Fire damage extends far beyond visible flames. Smoke, soot, and odors can permeate walls, furniture, and HVAC systems, requiring specialized cleaning and restoration. Our fire damage restoration team has the expertise and equipment to handle complete recovery from fire incidents of any size.</p>
+          <p>We begin with a thorough assessment to determine the extent of damage, then create a comprehensive restoration plan. Our services include soot removal, smoke odor elimination, structural cleaning, and complete reconstruction when necessary. We work efficiently to minimize downtime and return your properties to safe, habitable condition.</p>
+          <ul class="service-features">
+            <li><i class="fas fa-check"></i> Complete Fire Damage Assessment</li>
+            <li><i class="fas fa-check"></i> Soot &amp; Ash Removal</li>
+            <li><i class="fas fa-check"></i> Smoke Odor Elimination</li>
+            <li><i class="fas fa-check"></i> Content Cleaning &amp; Restoration</li>
+            <li><i class="fas fa-check"></i> Structural Repairs &amp; Reconstruction</li>
+          </ul>
+        </div>
+        <div class="service-detail-image">
+          <img data-placeholder="service-6" data-context="Restoration team cleaning fire and smoke damage from commercial property using specialized equipment and protective gear" src="assets/swift-restoration-restoration-and-remediation-services-service-service-6.webp" alt="Fire and smoke damage restoration services">
+        </div>
+      </div>
+
+      <div class="service-detail reverse">
+        <div class="service-detail-content">
+          <h2>Emergency Response Services</h2>
+          <p>Disasters don't wait for business hours. That's why Swift Restoration offers true 24/7 emergency response for property management companies throughout the Bay Area. When you call, you'll speak directly with a certified technician who can dispatch a crew to your property within 60 minutes.</p>
+          <p>Our emergency services include immediate damage assessment, temporary protection measures, and rapid mitigation to prevent further loss. We understand the urgency of restoration work and the importance of minimizing tenant disruption. Our team works around the clock when necessary to stabilize your property and begin the restoration process.</p>
+          <ul class="service-features">
+            <li><i class="fas fa-check"></i> True 24/7/365 Availability</li>
+            <li><i class="fas fa-check"></i> 60-Minute Response Time</li>
+            <li><i class="fas fa-check"></i> Immediate Damage Mitigation</li>
+            <li><i class="fas fa-check"></i> Emergency Board-Up Services</li>
+            <li><i class="fas fa-check"></i> Temporary Protection Measures</li>
+          </ul>
+        </div>
+        <div class="service-detail-image">
+          <img data-placeholder="service-7" data-context="Emergency response team arriving at property with restoration equipment truck during nighttime emergency call" src="assets/swift-restoration-restoration-and-remediation-services-service-service-7.webp" alt="24/7 emergency restoration response services">
+        </div>
+      </div>
+
+      <div class="service-detail">
+        <div class="service-detail-content">
+          <h2>Reconstruction &amp; Repairs</h2>
+          <p>After water, mold, or fire damage, many properties require reconstruction to return to their original condition. Swift Restoration provides complete reconstruction services, eliminating the need to coordinate with multiple contractors. Our licensed team handles everything from minor repairs to major reconstruction projects.</p>
+          <p>We work closely with property managers to ensure all repairs meet building codes and match the existing property aesthetics. Our reconstruction services include drywall replacement, flooring installation, painting, cabinet work, and complete room rebuilds when necessary. We maintain clear communication throughout the process and provide detailed documentation for insurance claims.</p>
+          <ul class="service-features">
+            <li><i class="fas fa-check"></i> Complete Reconstruction Services</li>
+            <li><i class="fas fa-check"></i> Licensed &amp; Insured Contractors</li>
+            <li><i class="fas fa-check"></i> Code-Compliant Repairs</li>
+            <li><i class="fas fa-check"></i> Quality Materials &amp; Workmanship</li>
+            <li><i class="fas fa-check"></i> Detailed Project Documentation</li>
+          </ul>
+        </div>
+        <div class="service-detail-image">
+          <img data-placeholder="service-8" data-context="Professional construction team rebuilding and repairing damaged interior walls and structures in residential property" src="assets/swift-restoration-restoration-and-remediation-services-service-service-8.webp" alt="Property reconstruction and repair services">
+        </div>
+      </div>
+
+      <div class="service-detail reverse">
+        <div class="service-detail-content">
+          <h2>Content Cleaning &amp; Restoration</h2>
+          <p>When disaster strikes, furniture, electronics, documents, and personal belongings often suffer damage alongside the structure. Our content cleaning and restoration services help salvage valuable items and reduce replacement costs. We use specialized techniques to clean and restore a wide range of materials.</p>
+          <p>Our content restoration process includes careful inventory, pack-out services, specialized cleaning, deodorization, and secure storage during property restoration. We handle everything from upholstered furniture and electronics to documents and artwork. Our goal is to restore as much as possible, saving money and preserving items with sentimental value.</p>
+          <ul class="service-features">
+            <li><i class="fas fa-check"></i> Complete Content Inventory</li>
+            <li><i class="fas fa-check"></i> Professional Pack-Out Services</li>
+            <li><i class="fas fa-check"></i> Specialized Cleaning Techniques</li>
+            <li><i class="fas fa-check"></i> Electronics Restoration</li>
+            <li><i class="fas fa-check"></i> Secure Climate-Controlled Storage</li>
+          </ul>
+        </div>
+        <div class="service-detail-image">
+          <img data-placeholder="service-9" data-context="Restoration specialist carefully cleaning and restoring damaged furniture and contents in professional restoration facility" src="assets/swift-restoration-restoration-and-remediation-services-service-service-9.webp" alt="Content cleaning and restoration services">
+        </div>
+      </div>
+
+      <div class="service-detail">
+        <div class="service-detail-content">
+          <h2>Deodorization Services</h2>
+          <p>Persistent odors from water damage, mold, fire, or smoke can make properties uninhabitable even after visible damage is repaired. Our professional deodorization services eliminate odors at their source rather than simply masking them. We use advanced techniques including thermal fogging, ozone treatment, and hydroxyl generation.</p>
+          <p>Our technicians identify the source of odors and select the most effective treatment method for each situation. We treat affected areas thoroughly, including HVAC systems, walls, and subflooring when necessary. The result is a completely odor-free environment that's ready for occupancy.</p>
+          <ul class="service-features">
+            <li><i class="fas fa-check"></i> Source Odor Identification</li>
+            <li><i class="fas fa-check"></i> Advanced Deodorization Technology</li>
+            <li><i class="fas fa-check"></i> HVAC System Treatment</li>
+            <li><i class="fas fa-check"></i> Thermal Fogging &amp; Ozone Treatment</li>
+            <li><i class="fas fa-check"></i> Complete Odor Elimination</li>
+          </ul>
+        </div>
+        <div class="service-detail-image">
+          <img data-placeholder="service-10" data-context="Professional deodorization technician using thermal fogging equipment to eliminate odors in residential property" src="assets/swift-restoration-restoration-and-remediation-services-service-service-10.webp" alt="Professional odor removal and deodorization services">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="why-choose">
+    <div class="container">
+      <h2>Why Property Managers Choose Our Services</h2>
+      <div class="benefits-grid">
+        <div class="benefit-item">
+          <i class="fas fa-certificate"></i>
+          <h3>Certified Professionals</h3>
+          <p>All our technicians are IICRC certified and undergo continuous training in the latest restoration techniques.</p>
+        </div>
+        <div class="benefit-item">
+          <i class="fas fa-clock"></i>
+          <h3>Rapid Response</h3>
+          <p>We arrive within 60 minutes of your call and begin mitigation immediately to minimize damage.</p>
+        </div>
+        <div class="benefit-item">
+          <i class="fas fa-file-invoice-dollar"></i>
+          <h3>Direct Insurance Billing</h3>
+          <p>We work directly with insurance companies and handle all documentation to simplify the claims process.</p>
+        </div>
+        <div class="benefit-item">
+          <i class="fas fa-clipboard-check"></i>
+          <h3>Thorough Documentation</h3>
+          <p>Every project includes detailed photos, moisture readings, and progress reports for your records.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <div class="container">
+      <h2>Ready to Protect Your Properties?</h2>
+      <p>Contact Swift Restoration today to discuss your restoration and remediation needs. Our mold remediation companies team is standing by 24/7 to serve property managers throughout the San Francisco Bay Area.</p>
+      <a href="/contact" class="btn-primary">Request Service Quote</a>
+    </div>
+  </section>
+
+  <a href="https://wa.me/[whatsapp_handle]" target="_blank" class="whatsapp-float" aria-label="WhatsApp" rel="noopener noreferrer">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  
+    <!-- Legal Footer -->
+    <footer class="legal-footer">
+      <div class="container">
+        <div class="footer-main">
+          <div class="all-rights-reserved">
+            <p>© 2025 Swift Restoration. All rights reserved.</p>
+          </div>
+          <div class="footer-social"><a href="https://facebook.com/[facebook_handle]" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+<a href="https://instagram.com/[instagram_handle]" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+<a href="https://wa.me/[whatsapp_handle]" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a></div>
+          <div class="footer-legal">
+            <a href="privacy.html" aria-label="Privacy Policy">
+              Privacy Policy
+            </a>
+            <span class="separator">|</span>
+            <a href="accessibility.html" aria-label="Accessibility">
+              Accessibility
+            </a>
+            <span class="separator">|</span>
+            <a href="terms.html" aria-label="Terms & Conditions">
+              Terms & Conditions
+            </a>
+          </div>
+        </div>
+        <div class="zappy-attribution">
+          <p>Generated by <a href="https://zappy5.com" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: underline;">Zappy</a></p>
+        </div>
+      </div>
+    </footer>
+
+
+<!-- Zappy Attribution Header Script -->
+<script>
+(function() {
+  var websiteId = '622e08f5-9153-44fe-9c5a-730a617d08ac';
+  
+  // Don't show header in preview mode
+  var currentUrl = window.location.href;
+  var isPreview = currentUrl.includes('/preview/') || 
+                  currentUrl.includes('/preview-fullscreen/') || 
+                  currentUrl.includes('localhost:5001') ||
+                  currentUrl.includes('localhost:3000');
+  
+  if (isPreview) {
+    return; // Exit early in preview mode
+  }
+  
+  fetch('https://api.zappy5.com/api/website/' + websiteId + '/tier')
+    .then(function(response) { return response.json(); })
+    .then(function(data) {
+      if (data.showAttribution) {
+        var header = document.getElementById('zappy-attribution-header');
+        if (header) {
+          header.style.display = 'block';
+        }
+      }
+    })
+    .catch(function(error) {
+      console.error('Failed to check tier:', error);
+    });
+})();
+</script>
+    <div data-integration="accessibility:toolbar"></div>
+    <script src="script.js"></script>
+</body></html>

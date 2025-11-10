@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://swift-restoration-622e08f5.zappy5.app/sitemap.xml
