@@ -392,65 +392,23 @@ window.onload = function() {
 };
 
 /* Added Component Script */
+
 document.addEventListener('DOMContentLoaded', function() {
-  const carousels = document.querySelectorAll('.testimonial-carousel');
+  const getDirectionsBtns = document.querySelectorAll('.get-directions-btn');
+  const mapOverlays = document.querySelectorAll('.map-overlay');
   
-  carousels.forEach(carousel => {
-    const slides = carousel.querySelectorAll('.testimonial-slide');
-    const prevBtn = carousel.querySelector('.carousel-prev');
-    const nextBtn = carousel.querySelector('.carousel-next');
-    const dotsContainer = carousel.querySelector('.carousel-dots');
-    
-    if (!slides.length || !prevBtn || !nextBtn || !dotsContainer) return;
-    
-    let currentSlide = 0;
-    let autoRotateInterval;
-    
-    // Create dots
-    slides.forEach((_, index) => {
-      const dot = document.createElement('button');
-      dot.classList.add('carousel-dot');
-      dot.setAttribute('aria-label', `Go to testimonial ${index + 1}`);
-      if (index === 0) dot.classList.add('active');
-      dot.addEventListener('click', () => {
-        goToSlide(index);
-        resetAutoRotate();
-      });
-      dotsContainer.appendChild(dot);
+  getDirectionsBtns.forEach(btn => {
+    btn.addEventListener('click', function() {
+      // Replace with your actual address
+      const address = encodeURIComponent('123 Main Street, Your City, State 12345');
+      window.open('https://www.google.com/maps/dir/?api=1&destination=' + address, '_blank');
     });
-    
-    const dots = carousel.querySelectorAll('.carousel-dot');
-    
-    function goToSlide(n) {
-      slides[currentSlide].classList.remove('active');
-      dots[currentSlide].classList.remove('active');
-      
-      currentSlide = (n + slides.length) % slides.length;
-      
-      slides[currentSlide].classList.add('active');
-      dots[currentSlide].classList.add('active');
-    }
-    
-    function resetAutoRotate() {
-      clearInterval(autoRotateInterval);
-      autoRotateInterval = setInterval(() => goToSlide(currentSlide + 1), 6000);
-    }
-    
-    prevBtn.addEventListener('click', () => {
-      goToSlide(currentSlide - 1);
-      resetAutoRotate();
+  });
+  
+  mapOverlays.forEach(overlay => {
+    overlay.addEventListener('click', function() {
+      // Can load actual embedded map here
+      alert('Map integration can be added with Google Maps API');
     });
-    
-    nextBtn.addEventListener('click', () => {
-      goToSlide(currentSlide + 1);
-      resetAutoRotate();
-    });
-    
-    // Auto-rotate every 6 seconds
-    autoRotateInterval = setInterval(() => goToSlide(currentSlide + 1), 6000);
-    
-    // Pause on hover
-    carousel.addEventListener('mouseenter', () => clearInterval(autoRotateInterval));
-    carousel.addEventListener('mouseleave', resetAutoRotate);
   });
 });
